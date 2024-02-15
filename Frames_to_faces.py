@@ -15,7 +15,7 @@ for file in img_list[0:5]:
     try:
         for (x,y,w,h) in faces:
             roi_color=img[y:y+h,x:x+w]
-        resized=cv2.resize(roi_color, (224,224))
+        resized=cv2.resize(roi_color, (128,128))
         cv2.imwrite("G:/"+str(img_number)+".jpg",resized)
     except:
         print("No faces")
